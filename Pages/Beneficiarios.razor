@@ -1,0 +1,58 @@
+﻿@page "/beneficiarios"
+@inject NavigationManager Navigation
+
+<h2>Lista de Beneficiários</h2>
+
+<div class="beneficiarios-container">
+    @if (beneficiarios.Count == 0)
+    {
+        <p>Nenhum beneficiário cadastrado ainda.</p>
+    }
+    else
+    {
+        <table class="beneficiarios-tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Doações Recebidas</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var b in beneficiarios)
+                {
+                    <tr>
+                        <td>@b.Nome</td>
+                        <td>@b.Endereco</td>
+                        <td>@b.DoacoesRecebidas</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <div class="btn-novo-beneficiario">
+        <button @onclick="CadastrarNovoBeneficiario">Cadastrar Novo Beneficiário</button>
+    </div>
+</div>
+
+@code {
+    private List<BeneficiarioModel> beneficiarios = new()
+    {
+        new BeneficiarioModel { Nome = "Maria Oliveira", Endereco = "Rua Esperança, 22", DoacoesRecebidas = 3 },
+        new BeneficiarioModel { Nome = "José Lima", Endereco = "Av. Brasil, 101", DoacoesRecebidas = 5 },
+        new BeneficiarioModel { Nome = "Luciana Costa", Endereco = "Travessa Alegria, 18", DoacoesRecebidas = 2 }
+    };
+
+    private void CadastrarNovoBeneficiario()
+    {
+        Navigation.NavigateTo("/cadastrar-beneficiario");
+    }
+
+    public class BeneficiarioModel
+    {
+        public string Nome { get; set; } = string.Empty;
+        public string Endereco { get; set; } = string.Empty;
+        public int DoacoesRecebidas { get; set; }
+    }
+}

@@ -1,0 +1,48 @@
+﻿@page "/estoque"
+
+<h2>Estoque de Doações</h2>
+
+<div class="estoque-container">
+    @if (estoque.Count == 0)
+    {
+        <p>Nenhuma doação registrada no momento.</p>
+    }
+    else
+    {
+        <table class="estoque-tabela">
+            <thead>
+                <tr>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Data da Doação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in estoque)
+                {
+                    <tr>
+                        <td>@item.Descricao</td>
+                        <td>@item.Quantidade</td>
+                        <td>@item.Data.ToString("dd/MM/yyyy")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+@code {
+    private List<DoacaoItem> estoque = new()
+    {
+        new DoacaoItem { Descricao = "Arroz", Quantidade = 10, Data = DateTime.Now.AddDays(-2) },
+        new DoacaoItem { Descricao = "Feijão", Quantidade = 5, Data = DateTime.Now.AddDays(-1) },
+        new DoacaoItem { Descricao = "Macarrão", Quantidade = 12, Data = DateTime.Now }
+    };
+
+    public class DoacaoItem
+    {
+        public string Descricao { get; set; } = string.Empty;
+        public int Quantidade { get; set; }
+        public DateTime Data { get; set; }
+    }
+}

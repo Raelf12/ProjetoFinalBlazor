@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjetoFinalBlazor.styles.css",
+      "PackagePath": "staticwebassets\\ProjetoFinalBlazor.styles.css"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "C:\\ProjetoFinalBlazor\\ProjetoFinalBlazor\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjetoFinalBlazor.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ProjetoFinalBlazor.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ProjetoFinalBlazor.props",
+      "PackagePath": "build\\ProjetoFinalBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjetoFinalBlazor.props",
+      "PackagePath": "buildMultiTargeting\\ProjetoFinalBlazor.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ProjetoFinalBlazor.props",
+      "PackagePath": "buildTransitive\\ProjetoFinalBlazor.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

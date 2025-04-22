@@ -1,0 +1,35 @@
+﻿@page "/inicio"
+
+<div class="inicio-container">
+    <h1>Projeto DoeMais</h1>
+
+    <div class="card-grid">
+        <NavLink href="/realizar-doacao" class="card" Match="NavLinkMatch.Prefix">
+            <div class="card-content">
+                <h3>Cadastrar Doação</h3>
+                <p>Registrar uma nova doação de alimentos.</p>
+            </div>
+        </NavLink>
+
+        <NavLink href="/estoque" class="card" Match="NavLinkMatch.Prefix">
+            <div class="card-content">
+                <h3>Verificar Estoque</h3>
+                <p>Acompanhe os alimentos disponíveis.</p>
+            </div>
+        </NavLink>
+
+        <NavLink href="/doadores" class="card" Match="NavLinkMatch.Prefix">
+            <div class="card-content">
+                <h3>Ver Doadores</h3>
+                <p>Consulte os doadores cadastrados.</p>
+            </div>
+        </NavLink>
+
+        <NavLink href="/beneficiarios" class="card" Match="NavLinkMatch.Prefix">
+            <div class="card-content">
+                <h3>Ver Beneficiários</h3>
+                <p>Veja quem está recebendo as doações.</p>
+            </div>
+        </NavLink>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@page "/doadores"
+@inject NavigationManager Navigation
+
+<h2>Lista de Doadores</h2>
+
+<div class="doadores-container">
+    @if (doadores.Count == 0)
+    {
+        <p>Nenhum doador cadastrado ainda.</p>
+    }
+    else
+    {
+        <table class="doadores-tabela">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>Doações Realizadas</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var doador in doadores)
+                {
+                    <tr>
+                        <td>@doador.Nome</td>
+                        <td>@doador.Endereco</td>
+                        <td>@doador.DoacoesFeitas</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    <div class="btn-novo-doador">
+        <button @onclick="CadastrarNovoDoador">Cadastrar Novo Doador</button>
+    </div>
+</div>
+
+@code {
+    private List<DoadorModel> doadores = new()
+    {
+        new DoadorModel { Nome = "Carlos Silva", Endereco = "Rua das Flores, 123", DoacoesFeitas = 4 },
+        new DoadorModel { Nome = "Ana Souza", Endereco = "Av. Central, 500", DoacoesFeitas = 2 },
+        new DoadorModel { Nome = "João Oliveira", Endereco = "Rua do Sol, 78", DoacoesFeitas = 6 }
+    };
+
+    private void CadastrarNovoDoador()
+    {
+        Navigation.NavigateTo("/cadastrar-doador");
+    }
+
+    public class DoadorModel
+    {
+        public string Nome { get; set; } = string.Empty;
+        public string Endereco { get; set; } = string.Empty;
+        public int DoacoesFeitas { get; set; }
+    }
+}

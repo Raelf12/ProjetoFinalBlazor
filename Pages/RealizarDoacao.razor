@@ -1,0 +1,58 @@
+﻿@page "/realizar-doacao"
+
+<h2>Realizar Doação</h2>
+
+<div class="doacao-form-container">
+    <EditForm Model="@doacao" OnValidSubmit="@EnviarDoacao">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="alimento">Alimento</label>
+            <input type="text" id="alimento" @bind="doacao.Alimento" placeholder="Nome do alimento" required />
+        </div>
+
+        <div class="form-group">
+            <label for="quantidade">Quantidade</label>
+            <input type="number" id="quantidade" @bind="doacao.Quantidade" placeholder="Ex: 10" required />
+        </div>
+
+        <div class="form-group">
+            <label for="beneficiario">Beneficiário</label>
+            <input type="text" id="beneficiario" @bind="doacao.Beneficiario" placeholder="Nome do beneficiário" required />
+        </div>
+
+        <div class="form-group">
+            <label for="endereco">Endereço de Entrega</label>
+            <input type="text" id="endereco" @bind="doacao.Endereco" placeholder="Endereço completo" required />
+        </div>
+
+        <div class="form-group">
+            <label for="validade">Data de Validade</label>
+            <input type="date" id="validade" @bind="doacao.Validade" required />
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Confirmar Doação</button>
+        </div>
+    </EditForm>
+</div>
+
+@code {
+    private DoacaoModel doacao = new();
+
+    private void EnviarDoacao()
+    {
+        // Aqui você pode adicionar lógica para salvar a doação
+        Console.WriteLine($"Doação realizada: {doacao.Alimento} para {doacao.Beneficiario}");
+    }
+
+    public class DoacaoModel
+    {
+        public string Alimento { get; set; } = string.Empty;
+        public int Quantidade { get; set; }
+        public string Beneficiario { get; set; } = string.Empty;
+        public string Endereco { get; set; } = string.Empty;
+        public DateTime Validade { get; set; } = DateTime.Today;
+    }
+}

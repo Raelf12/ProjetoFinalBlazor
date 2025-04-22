@@ -1,0 +1,41 @@
+﻿@* @page "/login"
+@inject NavigationManager Navigation
+
+<div class="login-container">
+    <div class="login-box">
+        <h2>Login</h2>
+
+        <EditForm Model="@loginModel" OnValidSubmit="@HandleLogin">
+            <DataAnnotationsValidator />
+            <ValidationSummary />
+
+            <input type="email" @bind="loginModel.Email" placeholder="Email" required />
+            <input type="password" @bind="loginModel.Password" placeholder="Senha" required />
+
+            <button type="submit">Entrar</button> 
+        </EditForm>
+
+        <div class="register-link">
+            <span>Não tem uma conta?</span>
+            <a href="/cadastro">Criar conta</a>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new();
+
+    private void HandleLogin()
+    {
+        // Aqui vai a lógica de autenticação
+        //Console.WriteLine($"Login: {loginModel.Email}");
+        Navigation.NavigateTo("/inicio");
+    }
+
+    public class LoginModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+    }
+}
+ *@
